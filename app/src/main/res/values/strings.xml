@@ -32,8 +32,8 @@
     <string name="no">No</string>
     <string name="ok">OK</string>
     <string name="deleted">Reset Successfully!</string>
-    <string name="question_3">3 Questions</string>
-    <string name="question_5">5 Questions</string>
+    <string name="question_3">A set questions of 3</string>
+    <string name="question_5">A set questions of 5</string>
     <string name="enterQuestion">Enter Question here</string>
     <string name="create">Create</string>
     <string name="createNewQues">Create A New Question</string>
