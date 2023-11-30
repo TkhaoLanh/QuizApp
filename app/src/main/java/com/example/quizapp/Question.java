@@ -6,18 +6,18 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
 public class Question implements Parcelable {
-    private int question;
+    private String question;
     private boolean answer;
     private int color;
 
-    public Question(int question, boolean answer, int color) {
+    public Question(String question, boolean answer, int color) {
         this.question = question;
         this.answer = answer;
         this.color = color;
     }
 
     protected Question(Parcel in) {
-        question = in.readInt();
+        question = in.readString();
         answer = in.readByte() != 0;
         color = in.readInt();
     }
@@ -34,7 +34,7 @@ public class Question implements Parcelable {
         }
     };
 
-    public int getQuestion() {
+    public String getQuestion() {
         return question;
     }
 
@@ -53,7 +53,7 @@ public class Question implements Parcelable {
 
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
-        dest.writeInt(question);
+        dest.writeString(question);
         dest.writeByte((byte) (answer ? 1 : 0));
         dest.writeInt(color);
     }
