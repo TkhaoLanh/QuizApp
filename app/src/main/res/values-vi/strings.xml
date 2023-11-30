@@ -31,8 +31,8 @@
     <string name="yes">Có</string>
     <string name="no">Không</string>
     <string name="deleted">Xóa thành công!</string>
-    <string name="question_3">3 Câu Hỏi</string>
-    <string name="question_5">5 Câu Hỏi</string>
+    <string name="question_3">Bộ 3 Câu Hỏi</string>
+    <string name="question_5">Bộ 5 Câu Hỏi</string>
     <string name="ok">OK</string>
     <string name="enterQuestion">Nhập Câu Hỏi mới tại đây</string>
     <string name="create">Tạo mới</string>
