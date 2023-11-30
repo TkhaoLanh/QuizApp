@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="true_button_text">True</string>
+    <string name="false_button_text">False</string>
+    <string name="question1">Canada is the largest country in the world by surface area</string>
+    <string name="question2">The national animal of Canada is the moose</string>
+    <string name="question3">The United States once captured and looted Toronto, then known as York</string>
+    <string name="question4">Quebec nearly voted to secede in 1995</string>
+    <string name="question5">A majority of people living in Vancouver were born in China or Hong Kong</string>
+    <string name="question6">Most of the population of Canada lives within 100 miles of the U.S. border</string>
+    <string name="question7">Ottawa is the northernmost national capital in the world</string>
+    <string name="question8">Saskatchewan is one of the "Prairie Provinces"</string>
+    <string name="question9">Canada is led by a President</string>
+    <string name="question10">Tim Horton was a hockey player</string>
+
+    <string name="getAverage">Get The Average</string>
+    <string name="selectNumOfQuestion">Select the number of Question</string>
+    <string name="reset">Reset the saved Result</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">InCorrect!</string>
+    <string name="result">Result</string>
+    <string name="yourScore">Your Score: </string>
+    <string name="outOf"> out of </string>
+    <string name="save">Save</string>
+    <string name="saved">Save Successfully!</string>
+    <string name="ignore">Ignore</string>
+    <string name="correctAns">Your correct answers are </string>
+    <string name="attempt">attempts</string>
+    <string name="in">in</string>
+    <string name="resetSavedResult">Do you want to reset your saved results?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="deleted">Reset Successfully!</string>
+    <string name="question_3">3 Questions</string>
+    <string name="question_5">5 Questions</string>
+    <string name="enterQuestion">Enter Question here</string>
+    <string name="create">Create</string>
+    <string name="createNewQues">Create A New Question</string>
+    <string-array name="color_options">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
+</resources>
