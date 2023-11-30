@@ -37,6 +37,8 @@
     <string name="enterQuestion">Nhập Câu Hỏi mới tại đây</string>
     <string name="create">Tạo mới</string>
     <string name="createNewQues">Tạo Câu Hỏi mới</string>
+    <string name="newQues">Tạo mới câu mới thành công!</string>
+    <string name="errorMess">Làm ơn điền câu hỏi mới và câu trả lời!</string>
     <string-array name="color_options">
         <item>Đỏ</item>
         <item>Xanh dương</item>
