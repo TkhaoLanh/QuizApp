@@ -50,6 +50,15 @@ public class MyApp extends Application {
     public void updateQuestionList(ArrayList<Question> updatedList) {
         questionListMyApp = updatedList;
     }
+    //add new question
+    public void addNewQuestion(Question newQuestion){
+        if(questionListMyApp == null){
+            questionListMyApp = new ArrayList<>();
+        }
+        else{
+            questionListMyApp.add(newQuestion);
+        }
+    }
 
     public int getQuestionListSize() {
         return questionListMyApp.size();
