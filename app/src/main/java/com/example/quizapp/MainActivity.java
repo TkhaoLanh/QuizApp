@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.Menu;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Instantiate the QuestionBank class and retrieve the list of questions
-        questionBank = new QuestionBank();
+        questionBank = new QuestionBank(this);
         questionArrayList = questionBank.getQuestionList();
 
         progressBar.setMax(questionArrayList.size()); // Set the maximum value of the progress bar
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         Collections.shuffle(questionArrayList);
        ((MyApp)getApplication()).setQuestionListMyApp(questionArrayList);
 
-        String questionText = getString(questionArrayList.get(currentQuestionIndex).getQuestion());
+        String questionText = (questionArrayList.get(currentQuestionIndex).getQuestion());
         int questionColor = questionArrayList.get(currentQuestionIndex).getColor();
         questionFragment = QuestionFragment.newInstance(questionText, questionColor);
 
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     private void displayQuestion(int index) {
         if (index >= 0 && index < questionArrayList.size()) {
             Question currentQuestion = questionArrayList.get(index);
-            String questionText = getString(currentQuestion.getQuestion());
+            String questionText = (currentQuestion.getQuestion());
             int questionColor = currentQuestion.getColor();
 
             // Update the QuestionFragment with the next question
@@ -329,9 +330,29 @@ public class MainActivity extends AppCompatActivity {
                 boolean isTrue = radioGroupOptions.getCheckedRadioButtonId() == trueBtn;
                 String selectedColor = spinnerColors.getSelectedItem().toString();
                 // Convert the selected color string to its corresponding color resource ID 
-                //int colorResourceId = getColorResourceId(selectedColor);
+                int colorValue = getColorFromString(selectedColor);
 
-               // Question newQuestion = new Question(questionText,isTrue,selectedColor);
+                //validate if user doesn't enter question or select answer
+                if(questionText.isEmpty() || !isTrue && radioGroupOptions.getCheckedRadioButtonId() == -1){
+                    //show error toast
+                    Toast.makeText(MainActivity.this, string.errorMess, Toast.LENGTH_SHORT).show();
+                }else {
+                    Question newQuestion = new Question(questionText,isTrue,colorValue);
+                    //add new question to arraylist
+                    ((MyApp)getApplication()).addNewQuestion(newQuestion);
+
+                    // Show a toast message indicating the question is added
+                    Toast.makeText(MainActivity.this, string.newQues, Toast.LENGTH_SHORT).show();
+
+                    // Update the currentQuestionIndex
+                    if (currentQuestionIndex >= questionArrayList.size()) {
+                        currentQuestionIndex = 0;
+                    }
+
+                    // Update the question fragment with the newly added question
+                    updateUIWithNewQuestion();
+                }
+
             }
         });
 
@@ -346,4 +367,36 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    private int getColorFromString(String colorString) {
+        switch (colorString) {
+            case "Red":
+                return Color.RED;
+            case "Blue":
+                return Color.BLUE;
+            case "Green":
+                return Color.GREEN;
+            default:
+                return Color.BLACK; // Default color if the string doesn't match
+        }
+    }
+    //update UI for new question
+    private void updateUIWithNewQuestion() {
+        // Retrieve the updated question list
+        ArrayList<Question> updatedQuestionList = ((MyApp) getApplication()).getQuestionListMyApp();
+
+        // Check if the list is not empty and currentQuestionIndex is within the list range
+        if (updatedQuestionList != null && currentQuestionIndex < updatedQuestionList.size()) {
+            // Retrieve the newly added question from the updated list
+            Question newQuestion = updatedQuestionList.get(currentQuestionIndex);
+
+            // Update the QuestionFragment with the newly added question
+            String questionText = newQuestion.getQuestion();
+            int questionColor = newQuestion.getColor();
+            questionFragment = QuestionFragment.newInstance(questionText, questionColor);
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(framelayout, questionFragment)
+                    .commit();
+        }
+    }
 }
