@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_options">
+        <item>Đỏ</item>
+        <item>Xanh dương</item>
+        <item>Xanh lá</item>
+    </string-array>
+    <string name="app_name">Ứng Dụng Đố Vui</string>
+    <string name="attempt">lần thử</string>
+    <string name="correct">Chính xác!</string>
+    <string name="correctAns">"Câu trả lời đúng của bạn là "</string>
+    <string name="create">Tạo mới</string>
+    <string name="createNewQues">Tạo Câu Hỏi mới</string>
+    <string name="deleted">Xóa thành công!</string>
+    <string name="enterQuestion">Nhập Câu Hỏi mới tại đây</string>
+    <string name="false_button_text">Sai</string>
+    <string name="getAverage">Hiển thị điểm trung bình</string>
+    <string name="ignore">Bỏ qua</string>
+    <string name="in">trong</string>
+    <string name="incorrect">Chưa chính xác!</string>
+    <string name="no">Không</string>
+    <string name="ok">OK</string>
+    <string name="outOf">trên</string>
+    <string name="question1">Canada là quốc gia có diện tích lớn nhất thế giới</string>
+    <string name="question10">Tim Horton là một vận động viên khúc côn cầu</string>
+    <string name="question2">Linh vật quốc gia của Canada là nai sừng tấm</string>
+    <string name="question3">Mỹ từng chiếm và cướp phá Toronto, lúc đó gọi là York</string>
+    <string name="question4">Quebec suýt bỏ phiếu ly khai vào năm 1995</string>
+    <string name="question5">Phần lớn người dân sống ở Vancouver sinh ra ở Trung Quốc hoặc Hồng Kông</string>
+    <string name="question6">Hầu hết dân số Canada sống trong phạm vi 100 dặm từ biên giới Hoa Kỳ</string>
+    <string name="question7">Ottawa là thủ đô quốc gia cực bắc trên thế giới</string>
+    <string name="question8">Saskatchewan là một trong những tỉnh thảo nguyên</string>
+    <string name="question9">Canada được lãnh đạo bởi một Tổng thống</string>
+    <string name="question_3">3 Câu Hỏi</string>
+    <string name="question_5">5 Câu Hỏi</string>
+    <string name="reset">Xóa kết quả đã lưu</string>
+    <string name="resetSavedResult">Bạn có muốn xóa kết quả của bạn không?</string>
+    <string name="result">Kết Quả</string>
+    <string name="save">Lưu</string>
+    <string name="saved">Lưu thành công!</string>
+    <string name="selectNumOfQuestion">Chọn số câu hỏi</string>
+    <string name="true_button_text">Đúng</string>
+    <string name="yes">Có</string>
+    <string name="yourScore">"Điểm Của Bạn:"</string>
+</resources>

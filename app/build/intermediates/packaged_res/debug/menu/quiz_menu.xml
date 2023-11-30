@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/getTotal" android:title="@string/getAverage"/>
+    <item android:id="@+id/numOfQues" android:title="@string/selectNumOfQuestion">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/num_3"
+                    android:title="@string/question_3" />
+                <item
+                    android:id="@+id/num_5"
+                    android:title="@string/question_5" />
+
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/resetResult" android:title="@string/reset"/>
+    <item android:id="@+id/createNewQues" android:title="@string/createNewQues"/>
+</menu>
