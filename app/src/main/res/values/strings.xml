@@ -37,6 +37,8 @@
     <string name="enterQuestion">Enter Question here</string>
     <string name="create">Create</string>
     <string name="createNewQues">Create A New Question</string>
+    <string name="newQues">A new question added!</string>
+    <string name="errorMess">Please enter your new question and its answer!</string>
     <string-array name="color_options">
         <item>Red</item>
         <item>Blue</item>
